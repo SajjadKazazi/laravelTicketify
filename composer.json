@@ -1,0 +1,40 @@
+{
+  "name": "sajjadkazazi/laravel-ticketify",
+  "homepage": "https://github.com/SajjadKazazi/laravelTicketify",
+  "description": "Manage Tickets with Laravel",
+  "keywords": [
+    "laravel",
+    "ticketify"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "sajjad kazazi",
+      "email": "sajjad.kazazi@yahoo.com"
+    }
+  ],
+  "require": {
+    "php": ">= 7.2",
+    "illuminate/contracts": "^6.0|^7.0|^8.0|^9.0",
+    "illuminate/support": "^6.0|^7.0|^8.0|^9.0",
+    "ext-json": "*"
+  },
+
+  "autoload": {
+    "psr-4": {
+      "Sajjadkazazi\\Ticketify\\": "src/",
+      "Sajjadkazazi\\Ticketify\\Tests\\": "tests/"
+    }
+  },
+  "minimum-stability": "dev",
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Sajjadkazazi\\laravel-ticketify\\TicketifyServiceProvider"
+      ],
+      "aliases": {
+        "Gateway": "Sajjadkazazi\\laravel-ticketify\\TicketifyFacade"
+      }
+    }
+  }
+}
