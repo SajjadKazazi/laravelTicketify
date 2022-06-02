@@ -26,15 +26,6 @@
       "Sajjadkazazi\\Ticketify\\Tests\\": "tests/"
     }
   },
-  "minimum-stability": "dev",
-  "extra": {
-    "laravel": {
-      "providers": [
-        "Sajjadkazazi\\laravel-ticketify\\TicketifyServiceProvider"
-      ],
-      "aliases": {
-        "Gateway": "Sajjadkazazi\\laravel-ticketify\\TicketifyFacade"
-      }
-    }
-  }
+  "minimum-stability": "dev"
+
 }
