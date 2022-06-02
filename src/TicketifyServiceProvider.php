@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Providers;
+namespace Sajjadkazazi\Ticketify;
 
-use App\Ticketify\Ticketify;
-use App\Ticketify\TicketifyFacade;
+use Sajjadkazazi\Ticketify\Ticketify;
+use Sajjadkazazi\Ticketify\TicketifyFacade;
 use Illuminate\Support\ServiceProvider;
 
 class TicketifyServiceProvider extends ServiceProvider

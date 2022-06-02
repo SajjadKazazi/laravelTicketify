@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Ticketify;
+namespace Sajjadkazazi\Ticketify;
 use Illuminate\Support\Facades\Facade;
 
 class TicketifyFacade extends Facade

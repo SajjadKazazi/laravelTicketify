@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Enumoration\Ticket;
+namespace Sajjadkazazi\Ticketify\Enumoration\Ticket;
 
 class TicketStatus
 {

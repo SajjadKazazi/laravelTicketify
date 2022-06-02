@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Ticketify;
+namespace Sajjadkazazi\Ticketify;
 
 
 class Ticketify
