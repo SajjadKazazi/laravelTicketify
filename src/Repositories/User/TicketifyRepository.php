@@ -7,7 +7,7 @@ use Sajjadkazazi\Ticketify\Models\Ticketify;
 class TicketifyRepository extends RepositoryAbstract
 {
 
-   public function createTicket($params=[]){
+   public function createTicket($params=array()){
        $ticket = new Ticketify();
        $ticket->subject = $params['subject'];
        $ticket->content = $params['content'];

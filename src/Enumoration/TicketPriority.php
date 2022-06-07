@@ -1,6 +1,6 @@
 <?php
 
-namespace Sajjadkazazi\Ticketify\Enumoration\Ticket;
+namespace Sajjadkazazi\Ticketify\Enumoration;
 
 class TicketPriority
 {
