@@ -23,10 +23,10 @@ class CreateTicketsTable extends Migration
             $table->integer('user_id')->unsigned();
         });
 
-        Schema::create('ticketify_categories', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('name');
-        });
+//        Schema::create('ticketify_categories', function (Blueprint $table) {
+//            $table->increments('id');
+//            $table->string('name');
+//        });
         Schema::create('ticketify_replies', function (Blueprint $table) {
             $table->increments('id');
             $table->longText('content');
@@ -39,11 +39,13 @@ class CreateTicketsTable extends Migration
             $table->id();
             $table->string('subject');
             $table->longText('content');
-            $table->enum('status',[App\Enumoration\Ticket\TicketStatus::statuses]);
-            $table->enum('priority',[\App\Enumoration\Ticket\TicketPriority::statuses]);
-            $table->integer('department_id')->unsigned();
+            $table->enum('status',[\Sajjadkazazi\Ticketify\Enumoration\Ticket\TicketStatus::statuses]);
+            $table->enum('priority',[\Sajjadkazazi\Ticketify\Enumoration\Ticket\TicketPriority::statuses]);
+            $table->integer('department_id')->unsigned()->nullable();
             $table->integer('user_id')->unsigned();
-            $table->integer('category_id')->unsigned();
+            $table->integer('to_user_id')->unsigned()->nullable();
+//            $table->integer('category_id')->unsigned();
+            $table->timestamp('completed_at');
             $table->timestamps();
             $table->softDeletes();
         });
