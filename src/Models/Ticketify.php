@@ -19,10 +19,10 @@ class Ticketify extends Model
     ];
 
 
-    public function category(){
-        return $this->belongsTo('Sajjadkazazi\Ticketify\Models\TicketifyCategory','category_id');
-    }
-    public function user()
+//    public function category(){
+//        return $this->belongsTo('Sajjadkazazi\Ticketify\Models\TicketifyCategory','category_id');
+//    }
+    public function creator()
     {
         return $this->belongsTo('App\User', 'user_id');
     }
@@ -66,5 +66,10 @@ class Ticketify extends Model
     {
         return $query->where('user_id', $id);
     }
+    public function addReply($reply)
+    {
+        $reply = $this->replies()->create($reply);
 
+        return $reply;
+    }
 }

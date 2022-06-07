@@ -39,8 +39,8 @@ class CreateTicketsTable extends Migration
             $table->id();
             $table->string('subject');
             $table->longText('content');
-            $table->enum('status',[\Sajjadkazazi\Ticketify\Enumoration\Ticket\TicketStatus::statuses]);
-            $table->enum('priority',[\Sajjadkazazi\Ticketify\Enumoration\Ticket\TicketPriority::statuses]);
+            $table->enum('status',[\Sajjadkazazi\Ticketify\Enumoration\TicketStatus::statuses]);
+            $table->enum('priority',[\Sajjadkazazi\Ticketify\Enumoration\TicketPriority::statuses]);
             $table->integer('department_id')->unsigned()->nullable();
             $table->integer('user_id')->unsigned();
             $table->integer('to_user_id')->unsigned()->nullable();

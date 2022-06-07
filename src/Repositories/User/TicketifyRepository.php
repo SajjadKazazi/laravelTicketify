@@ -2,18 +2,22 @@
 
 namespace Sajjadkazazi\Ticketify\User;
 
+use Sajjadkazazi\Ticketify\Binders\TicketifyBinder;
 use Sajjadkazazi\Ticketify\Models\Ticketify;
 
 class TicketifyRepository extends RepositoryAbstract
 {
+    protected $binder = TicketifyBinder::class;
 
-   public function createTicket($params=array()){
-       $ticket = new Ticketify();
-       $ticket->subject = $params['subject'];
-       $ticket->content = $params['content'];
-       $ticket->content = $params['content'];
-       $ticket->status = $params['status'];
-       $ticket->priority = $params['priority'];
-       $ticket->status = $params['status'];
-   }
+    public function all_ticket($limit = 10)
+    {
+        $with = $this->getWiths();
+
+        $data = Ticketify::with($with)->paginate($limit);
+
+
+        $binder = new $this->binder($data, $this->selection);
+
+        return $binder->getBinder();
+    }
 }
